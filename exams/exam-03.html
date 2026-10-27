@@ -86,4 +86,32 @@
 <div class="source">Candidate reminder: High-quality answers will demonstrate independent reasoning, prioritisation, justification, and careful application of cybersecurity and data protection principles to the facts of the case. Marks are awarded for the quality of the analysis and the reasoning behind recommendations, not simply the number of points presented.</div></div><div class="panel"><h2>Answer sheet</h2><p class="muted">For questions requiring a selection (e.g. answer any two), answer only the required number. Written answers should identify the question and subparts clearly.</p><div class="question"><strong>Response 1 — QUESTION 1: BREACH INVESTIGATION AND CRITICAL INCIDENT ANALYSIS</strong><textarea class="answer" name="Q01" aria-label="Answer to QUESTION 1: BREACH INVESTIGATION AND CRITICAL INCIDENT ANALYSIS" placeholder="Type your answer here"></textarea></div>
 <div class="question"><strong>Response 2 — QUESTION 2: DATA PROTECTION, PRIVACY AND LEGAL RESPONSIBILITY</strong><textarea class="answer" name="Q02" aria-label="Answer to QUESTION 2: DATA PROTECTION, PRIVACY AND LEGAL RESPONSIBILITY" placeholder="Type your answer here"></textarea></div>
 <div class="question"><strong>Response 3 — QUESTION 3: SECURITY CONTROL FAILURES AND RISK MANAGEMENT</strong><textarea class="answer" name="Q03" aria-label="Answer to QUESTION 3: SECURITY CONTROL FAILURES AND RISK MANAGEMENT" placeholder="Type your answer here"></textarea></div>
-<div class="question"><strong>Response 4 — QUESTION 4: INCIDENT RESPONSE, ETHICAL DECISION-MAKING AND BUSINESS CONTINUITY</strong><textarea class="answer" name="Q04" aria-label="Answer to QUESTION 4: INCIDENT RESPONSE, ETHICAL DECISION-MAKING AND BUSINESS CONTINUITY" placeholder="Type your answer here"></textarea></div><label><input type="checkbox" required> I confirm that these are my own answers and I am ready to submit my final examination.</label><p><button type="submit">Submit Final Examination</button></p><p class="muted">Do not close this page until FormSubmit confirms your submission. Your browser must be online. Do not click Submit more than once.</p></div></form></main><script>let remaining=3*3600;setInterval(()=>{if(remaining>0)remaining--;let h=String(Math.floor(remaining/3600)).padStart(2,'0'),m=String(Math.floor(remaining%3600/60)).padStart(2,'0'),s=String(remaining%60).padStart(2,'0');document.getElementById('clock').textContent=`${h}:${m}:${s}`;},1000);let sent=false;document.getElementById('examform').addEventListener('submit',e=>{if(sent){e.preventDefault();return;}if(!confirm('Submit your final examination now? Verify all answers first.')){e.preventDefault();return;}sent=true;const btn=e.currentTarget.querySelector('button[type=submit]');if(btn){btn.disabled=true;btn.textContent='Sending examination…';}});</script></body></html>
+<div class="question"><strong>Response 4 — QUESTION 4: INCIDENT RESPONSE, ETHICAL DECISION-MAKING AND BUSINESS CONTINUITY</strong><textarea class="answer" name="Q04" aria-label="Answer to QUESTION 4: INCIDENT RESPONSE, ETHICAL DECISION-MAKING AND BUSINESS CONTINUITY" placeholder="Type your answer here"></textarea></div><label><input type="checkbox" required> I confirm that these are my own answers and I am ready to submit my final examination.</label><p><button type="submit">Submit Final Examination</button></p><p class="muted">Do not close this page until FormSubmit confirms your submission. Your browser must be online. Do not click Submit more than once.</p></div></form></main><script>let remaining=3*3600;setInterval(()=>{if(remaining>0)remaining--;let h=String(Math.floor(remaining/3600)).padStart(2,'0'),m=String(Math.floor(remaining%3600/60)).padStart(2,'0'),s=String(remaining%60).padStart(2,'0');document.getElementById('clock').textContent=`${h}:${m}:${s}`;},1000);let sent=false;document.getElementById('examform').addEventListener('submit',e=>{if(sent){e.preventDefault();return;}if(!confirm('Submit your final examination now? Verify all answers first.')){e.preventDefault();return;}sent=true;const btn=e.currentTarget.querySelector('button[type=submit]');if(btn){btn.disabled=true;btn.textContent='Sending examination…';}});</script><script src="../pdf-config.js"></script><script>
+/* Independent PDF copy. Existing FormSubmit submission is unchanged. */
+(function(){
+ const f=document.getElementById('examform'); if(!f) return;
+ f.addEventListener('submit',function(e){
+   if(e.defaultPrevented) return;
+   const endpoint=(window.HSBF_PDF_WEBAPP_URL||'').trim();
+   if(!/^https:\/\/script\.google\.com\/macros\/s\/.+\/exec(?:\?.*)?$/.test(endpoint)) return;
+   try {
+     const pairs=new FormData(f), answers=[];
+     const seen=new Set();
+     f.querySelectorAll('.question').forEach((q,i)=>{
+       const title=(q.querySelector('strong')?.textContent||'Question '+(i+1)).trim();
+       const controls=q.querySelectorAll('input[name],textarea[name],select[name]');
+       const names=[...new Set([...controls].map(c=>c.name))];
+       names.forEach(n=>{
+         if(seen.has(n)) return; seen.add(n);
+         const vals=[...controls].filter(c=>c.name===n && (!['checkbox','radio'].includes(c.type)||c.checked)).map(c=>c.value);
+         answers.push({question:title,answer:vals.join(', ')||'[No answer]'});
+       });
+     });
+     const payload=new URLSearchParams();
+     ['Student_Name','Student_Number','Student_Email','Programme','Exam_Title','Exam_Number'].forEach(k=>payload.set(k,String(pairs.get(k)||'')));
+     payload.set('hsbf_pdf_request','1');payload.set('hsbf_pdf_answers',JSON.stringify(answers));
+     // Keepalive allows the request to continue during navigation; confirmation requires mailbox check.
+     fetch(endpoint,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:payload.toString()}).catch(()=>{});
+   }catch(err){console.error('Optional PDF copy could not be initiated',err);}
+ },true);
+})();</script></body></html>
