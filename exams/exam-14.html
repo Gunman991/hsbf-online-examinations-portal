@@ -42,7 +42,6 @@
 (function(){
  const f=document.getElementById('examform'); if(!f) return;
  f.addEventListener('submit',function(e){
-   if(e.defaultPrevented) return;
    const endpoint=(window.HSBF_PDF_WEBAPP_URL||'').trim();
    if(!/^https:\/\/script\.google\.com\/macros\/s\/.+\/exec(?:\?.*)?$/.test(endpoint)) return;
    try {
