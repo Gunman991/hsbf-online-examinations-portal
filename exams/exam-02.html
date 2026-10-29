@@ -1,127 +1,59 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>HSBF Final Exam 02 — COMPUTER FORENSIC TOOLS &amp; TECHNIQUES</title><link href="../style.css" rel="stylesheet"/><style>textarea{min-height:260px!important;width:100%;max-width:100%;box-sizing:border-box;resize:vertical;line-height:1.6;padding:12px} .hsbf-choice-answer{display:block;margin:14px 0 28px;padding:14px;border:1px solid #cbd5e1;border-radius:10px;font-weight:700;background:#f8fafc}.hsbf-choice-answer textarea{display:block;margin-top:10px;font-weight:400;background:#fff}</style><script>document.addEventListener('input',function(e){if(e.target.tagName==='TEXTAREA'){let t=e.target;t.style.height='auto';t.style.height=Math.max(260,t.scrollHeight+4)+'px';}});document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('textarea').forEach(function(t){t.style.height=Math.max(260,t.scrollHeight+4)+'px';});});</script></head><body><header class="bar"><small>HARARE SCHOOL OF BUSINESS &amp; FINANCE • FINAL EXAMINATIONS</small><h1>COMPUTER FORENSIC TOOLS &amp; TECHNIQUES</h1><small>Examination 02 / 50 • Module HDLCRM128 • Level 1.2 • 3 Hours</small></header><main><div class="panel"><h2>Candidate information</h2><p class="meta">Original paper date: 25/10/2026. Original paper: COMPUTER FORENSIC TOOLS &amp; TECHNIQUES DONE.docx.</p><div class="warning"><strong>Examination release notice:</strong> This page is intended for scheduled use only. It must not be published to a public GitHub Pages website before the exam is released.</div><p class="muted">Read all the instructions and the full original question paper before answering. Your exam duration is set by the invigilator; the on-screen timer is informational only and does not automatically submit.</p><p>Time remaining: <span id="clock">03:00:00</span></p></div><form action="https://formsubmit.co/kelvincybert9911@icloud.com" id="examform" method="POST"><input name="_subject" type="hidden" value="HSBF FINAL EXAM 02: COMPUTER FORENSIC TOOLS &amp; TECHNIQUES"/><input name="_captcha" type="hidden" value="true"/><input name="_template" type="hidden" value="table"/><input name="Exam_Number" type="hidden" value="02"/><input name="Exam_Title" type="hidden" value="COMPUTER FORENSIC TOOLS &amp; TECHNIQUES"/><input name="Module_Code" type="hidden" value="HDLCRM128"/><div class="panel"><h2>Student details</h2><div class="fields"><label>Full name<input autocomplete="name" name="Student_Name" required=""/></label><label>Student number<input name="Student_Number" required=""/></label><label>Programme<input name="Programme" required=""/></label><label>Email (optional)<input name="Student_Email" type="email"/></label></div></div><div class="panel"><h2>Original examination question paper</h2><p class="muted">Question text is reproduced from the uploaded source. Tables are represented as text rows where applicable.</p><div class="source">Harare School of Business and Finance (HSBF)</div>
-<div class="source">In association with</div>
-<div class="source">Zimbabwe Ezekiel Guti University (ZEGU)</div>
-<div class="source">HARARE SCHOOL OF BUSINESS AND FINANCE</div>
-<div class="source">RISK AND LOSS CONTROL</div>
-<div class="source">COMPUTER FORENSIC TOOLS &amp; TECHNIQUES</div>
-<div class="source">EXAMINATION PAPER</div>
-<div class="source">MODULE CODE		:	HDLCRM128</div>
-<div class="source">MODULE TITLE		:	COMPUTER FORENSIC TOOLS &amp; TECHNIQUES</div>
-<div class="source">DURATION			:	3 Hours</div>
-<div class="source">LEVEL			:	1.2</div>
-<div class="source">DATE				:	25/10/2026</div>
-<div class="source">DIPLOMA-LEVEL SCENARIO-BASED EXAMINATION</div>
-<div class="source">Assessment Type : Critical Thinking and Applied Analysis</div>
-<div class="source">Total Marks : 100</div>
-<div class="source">Number of Questions : 4</div>
-<div class="source">Marks per Question : 25</div>
-<div class="source">Duration : 3 Hours</div>
-<div class="source head">INSTRUCTIONS TO CANDIDATES</div>
-<div class="source">Answer all four questions.</div>
-<div class="source">Each question carries 25 marks.</div>
-<div class="source">Answers may be written in essay format or point form, provided that explanations are clear, logical, and adequately developed.</div>
-<div class="source">Base your answers on the case study and apply appropriate computer forensic tools, techniques, and investigative principles.</div>
-<div class="source">Demonstrate critical thinking, technical judgement, evidence preservation, and professional decision-making.</div>
-<div class="source">Do not merely define forensic concepts. Explain how they apply to the circumstances presented.</div>
-<div class="source">Where evidence is incomplete or uncertain, identify the limitations and explain what further investigation is necessary.</div>
-<div class="source">Justify your recommendations and distinguish between confirmed evidence, reasonable interpretations, and unsupported assumptions.</div>
-<div class="source head">CASE STUDY: THE MISSING MILLIONS AT CRESTPOINT MICROFINANCE</div>
-<div class="source">Crest Point Microfinance is a financial services company that provides loans, processes customer repayments, and manages electronic transactions for individuals and small businesses. The company employs 95 staff members and maintains a central computer server, a finance department network, employee workstations, and a cloud-based transaction management platform.</div>
-<div class="source">For several months, the company’s management had noticed discrepancies between customer repayment records and the amounts appearing in its financial reports. Some customers claimed that they had repaid their loans in full, yet the system continued to show outstanding balances. In other cases, transactions appeared in the system without corresponding bank deposits.</div>
-<div class="source">The finance manager initially attributed the discrepancies to accounting errors. However, an internal review identified several transactions that appeared to have been altered after their original recording.</div>
-<div class="source">The investigation became more serious when a junior finance officer reported receiving instructions from a senior manager to modify certain transaction records. The officer claimed that the instructions had been sent through email and a workplace messaging application.</div>
-<div class="source">Two days later, the company discovered that several transaction records and email messages were missing from the finance officer’s workstation. The workstation had also been used to access the central transaction management platform shortly before the discrepancies were discovered.</div>
-<div class="source">The company suspected that the finance officer might have participated in the fraudulent transactions. However, the officer denied wrongdoing and alleged that another employee had remotely accessed the workstation using shared credentials.</div>
-<div class="source">The company’s IT department immediately disconnected the workstation from the office network, shut it down, and placed it in a locked office. No photographs were taken before the workstation was moved, and no written record was made of who handled it. The workstation had not been forensically imaged, and its original storage drive remained installed.</div>
-<div class="source">During the initial review, the IT technician used ordinary file browsing to search for deleted documents. The technician also opened several suspicious files and copied them to a USB drive. The technician could not explain whether the copied files were identical to the originals or whether the actions had changed any metadata.</div>
-<div class="source">A subsequent inspection revealed that:</div>
-<div class="source">The workstation contained a standard hard disk drive and had been running a Windows operating system.</div>
-<div class="source">The employee’s account had access to confidential financial records and customer information.</div>
-<div class="source">Several files had modification timestamps that appeared inconsistent with the dates on which the transactions were allegedly processed.</div>
-<div class="source">The workstation contained browser history suggesting access to the company’s transaction platform outside normal working hours.</div>
-<div class="source">A USB storage device had recently been connected to the workstation.</div>
-<div class="source">Some relevant emails were missing from the local mailbox, although copies might still exist on the company’s email server.</div>
-<div class="source">The organisation had centralised login records, but the retention period was limited.</div>
-<div class="source">The server’s transaction logs showed changes to several financial records, but the organisation had not yet established which user or device had initiated every change.</div>
-<div class="source">The workstation’s clock might not have been synchronised with the server’s clock.</div>
-<div class="source">The company had no formal digital evidence handling procedure and had never trained its staff in computer forensic investigations.</div>
-<div class="source">Management instructed an independent forensic investigation team to determine what happened, identify the relevant evidence, establish whether the workstation had been used to manipulate financial records, and prepare findings suitable for disciplinary or legal proceedings if warranted.</div>
-<div class="source">You are a member of the appointed computer forensic investigation team. Answer all four questions using the case study as your primary source of evidence.</div>
-<div class="source head">QUESTION 1: DIGITAL EVIDENCE IDENTIFICATION, PRESERVATION AND CHAIN OF CUSTODY</div>
-<div class="source">[25 MARKS]</div>
-<div class="source">The company’s IT technician believes that the workstation is ready for examination because it has already been disconnected from the network and placed in a locked office. The investigation supervisor, however, is concerned that the initial handling may have compromised the integrity of the evidence.</div>
-<div class="source">As the forensic investigator, you must determine how the investigation should proceed.</div>
-<div class="source">Required:</div>
-<div class="source">a) Identify and analyse at least five potential sources of digital evidence in the case. Explain what each source might reveal about the suspected manipulation of financial records. (6 marks)</div>
-<div class="source">b) Critically evaluate the IT technician’s decision to shut down the workstation, browse its files, open suspicious documents, and copy files to a USB device before forensic acquisition. Explain the possible consequences for evidence integrity, metadata, and volatile information. (6 marks)</div>
-<div class="source">c) Develop a step-by-step procedure for securing, documenting, acquiring, and preserving the workstation and other relevant digital evidence. Include appropriate considerations for photographs, device identification, storage media, forensic imaging, hashing, and chain of custody. (8 marks)</div>
-<div class="source">d) Explain how an investigator should respond if a relevant file is discovered to have been modified during the initial IT inspection. Discuss how the team can document the limitation, assess the remaining evidence, and maintain investigative credibility. (5 marks)</div>
-<div class="source head">QUESTION 2: FORENSIC TOOLS, ACQUISITION AND TECHNICAL EXAMINATION</div>
-<div class="source">[25 MARKS]</div>
-<div class="source">The investigation team has obtained approval to conduct a forensic examination of the workstation, its storage drive, the USB device, and relevant server records.</div>
-<div class="source">The team must select suitable tools and techniques without unnecessarily altering the original evidence. The investigation may eventually be reviewed by management, external auditors, legal representatives, or a court.</div>
-<div class="source">Required:</div>
-<div class="source">a) Recommend appropriate forensic tools for the acquisition and examination of the workstation and associated evidence. Discuss the roles and limitations of tools such as FTK Imager, Autopsy, EnCase, Magnet AXIOM, and relevant operating-system or log-analysis utilities. Explain why a tool should be selected according to the investigative requirement rather than its popularity. (7 marks)</div>
-<div class="source">b) Explain how a forensic image should be acquired and verified. Discuss the purpose of a write blocker where appropriate, cryptographic hashing, verification of the acquired image, and preservation of the original storage device. (6 marks)</div>
-<div class="source">c) Describe how the investigation team could use forensic examination techniques to investigate deleted files, file metadata, browser history, USB connection artefacts, email records, and relevant transaction logs. Explain what each technique could establish and what it could not conclusively prove. (7 marks)</div>
-<div class="source">d) The team finds that a file’s modification timestamp differs from the timestamp recorded by the transaction server. Evaluate at least three possible explanations for this discrepancy and explain how investigators should correlate timestamps before drawing conclusions. (5 marks)</div>
-<div class="source head">QUESTION 3: DIGITAL ARTEFACT ANALYSIS, TIMELINE RECONSTRUCTION AND ATTRIBUTION</div>
-<div class="source">[25 MARKS]</div>
-<div class="source">The preliminary forensic examination identifies the following findings:</div>
-<div class="source">A document containing transaction details was deleted from the workstation.</div>
-<div class="source">A USB storage device was connected shortly before the deletion.</div>
-<div class="source">The browser history indicates access to the transaction management platform after normal working hours.</div>
-<div class="source">Server logs record changes to several customer repayment records.</div>
-<div class="source">An email relating to the changes is missing from the local mailbox.</div>
-<div class="source">The workstation’s user account was used to access the system, but the organisation cannot establish whether the account holder was physically present.</div>
-<div class="source">Some timestamps differ between the workstation and the server.</div>
-<div class="source">No direct evidence has yet established who physically performed the changes or whether the finance officer acted with fraudulent intent.</div>
-<div class="source">Management wants the investigation team to identify the responsible employee as quickly as possible.</div>
-<div class="source">Required:</div>
-<div class="source">a) Explain how investigators could correlate file system artefacts, browser history, USB artefacts, email evidence, user account activity, and server logs to construct a defensible timeline of events. Identify the significance and limitations of each source. (7 marks)</div>
-<div class="source">b) Analyse the distinction between establishing that an action occurred on a device, establishing that a particular user account was involved, and establishing that a particular individual performed the action. Explain why these conclusions are not necessarily equivalent. (6 marks)</div>
-<div class="source">c) Propose a method for investigating the deleted transaction document and missing email. Explain how deleted-file recovery, email server records, backups, metadata, and other corroborating evidence could support or challenge the competing explanations. (6 marks)</div>
-<div class="source">d) Evaluate whether the preliminary findings are sufficient to conclude that the finance officer committed fraud. Identify at least three alternative explanations or uncertainties that must be investigated and explain what additional evidence could help resolve them. (6 marks)</div>
-<div class="source head">QUESTION 4: FORENSIC REPORTING, PROFESSIONAL ETHICS AND EVIDENCE PRESENTATION</div>
-<div class="source">[25 MARKS]</div>
-<div class="source">After two weeks of investigation, the forensic team has recovered some deleted documents, verified forensic images, analysed selected server logs, and developed a preliminary timeline. However, certain emails remain unavailable, some logs have expired, and the initial IT handling of the workstation has created uncertainties about the original state of some files.</div>
-<div class="source">The managing director demands a report stating conclusively that the finance officer committed fraud. The finance manager also asks the team to exclude evidence that might suggest another employee had access to the workstation.</div>
-<div class="source">The investigation supervisor refuses to make a conclusion that is not supported by the evidence.</div>
-<div class="source">Required:</div>
-<div class="source">a) Explain how the forensic team should structure a professional forensic report. Identify the essential sections and describe how the team should distinguish observations, examination methods, analytical interpretations, limitations, and conclusions. (6 marks)</div>
-<div class="source">b) Critically evaluate the ethical and professional implications of management’s request to predetermine the conclusion and exclude potentially relevant evidence. Explain how impartiality, objectivity, confidentiality, and professional accountability should guide the investigation. (6 marks)</div>
-<div class="source">c) Describe how the team should present its findings to a non-technical audience while retaining sufficient technical detail for independent review. Explain how exhibits, hash values, evidence references, timelines, screenshots, and documented procedures can support the report. (6 marks)</div>
-<div class="source">d) Recommend practical improvements to the organisation’s digital evidence handling and incident investigation procedures. Include staff training, evidence access controls, chain-of-custody documentation, acquisition and verification procedures, log retention, and periodic testing of the investigation process. (7 marks)</div>
-<div class="source">END OF EXAMINATION</div></div><div class="panel"><h2>Answer sheet</h2><p class="muted">For questions requiring a selection (e.g. answer any two), answer only the required number. Written answers should identify the question and subparts clearly.</p><div class="question"><strong>Response 1 — QUESTION 1: DIGITAL EVIDENCE IDENTIFICATION, PRESERVATION AND CHAIN OF CUSTODY</strong><textarea aria-label="Answer to QUESTION 1: DIGITAL EVIDENCE IDENTIFICATION, PRESERVATION AND CHAIN OF CUSTODY" class="answer" name="Q01" placeholder="Type your answer here" rows="12" style="min-height:260px;width:100%;box-sizing:border-box;resize:vertical;"></textarea></div>
-<div class="question"><strong>Response 2 — QUESTION 2: FORENSIC TOOLS, ACQUISITION AND TECHNICAL EXAMINATION</strong><textarea aria-label="Answer to QUESTION 2: FORENSIC TOOLS, ACQUISITION AND TECHNICAL EXAMINATION" class="answer" name="Q02" placeholder="Type your answer here" rows="12" style="min-height:260px;width:100%;box-sizing:border-box;resize:vertical;"></textarea></div>
-<div class="question"><strong>Response 3 — QUESTION 3: DIGITAL ARTEFACT ANALYSIS, TIMELINE RECONSTRUCTION AND ATTRIBUTION</strong><textarea aria-label="Answer to QUESTION 3: DIGITAL ARTEFACT ANALYSIS, TIMELINE RECONSTRUCTION AND ATTRIBUTION" class="answer" name="Q03" placeholder="Type your answer here" rows="12" style="min-height:260px;width:100%;box-sizing:border-box;resize:vertical;"></textarea></div>
-<div class="question"><strong>Response 4 — QUESTION 4: FORENSIC REPORTING, PROFESSIONAL ETHICS AND EVIDENCE PRESENTATION</strong><textarea aria-label="Answer to QUESTION 4: FORENSIC REPORTING, PROFESSIONAL ETHICS AND EVIDENCE PRESENTATION" class="answer" name="Q04" placeholder="Type your answer here" rows="12" style="min-height:260px;width:100%;box-sizing:border-box;resize:vertical;"></textarea></div><label><input required="" type="checkbox"/> I confirm that these are my own answers and I am ready to submit my final examination.</label><p><button type="submit">Submit Final Examination</button></p><p class="muted">Do not close this page until FormSubmit confirms your submission. Your browser must be online. Do not click Submit more than once.</p></div></form></main><script>let remaining=3*3600;setInterval(()=>{if(remaining>0)remaining--;let h=String(Math.floor(remaining/3600)).padStart(2,'0'),m=String(Math.floor(remaining%3600/60)).padStart(2,'0'),s=String(remaining%60).padStart(2,'0');document.getElementById('clock').textContent=`${h}:${m}:${s}`;},1000);let sent=false;document.getElementById('examform').addEventListener('submit',e=>{if(sent){e.preventDefault();return;}if(!confirm('Submit your final examination now? Verify all answers first.')){e.preventDefault();return;}sent=true;const btn=e.currentTarget.querySelector('button[type=submit]');if(btn){btn.disabled=true;btn.textContent='Sending examination…';}});</script><script src="../pdf-config.js"></script><script>
-/* Independent PDF copy. Existing FormSubmit submission is unchanged. */
-(function(){
- const f=document.getElementById('examform'); if(!f) return;
- f.addEventListener('submit',function(e){
-  
-   const endpoint=(window.HSBF_PDF_WEBAPP_URL||'').trim();
-   if(!/^https:\/\/script\.google\.com\/macros\/s\/.+\/exec(?:\?.*)?$/.test(endpoint)) return;
-   try {
-     const pairs=new FormData(f), answers=[];
-     const seen=new Set();
-     f.querySelectorAll('.question').forEach((q,i)=>{
-       const title=(q.querySelector('strong')?.textContent||'Question '+(i+1)).trim();
-       const controls=q.querySelectorAll('input[name],textarea[name],select[name]');
-       const names=[...new Set([...controls].map(c=>c.name))];
-       names.forEach(n=>{
-         if(seen.has(n)) return; seen.add(n);
-         const vals=[...controls].filter(c=>c.name===n && (!['checkbox','radio'].includes(c.type)||c.checked)).map(c=>c.value);
-         answers.push({question:title,answer:vals.join(', ')||'[No answer]'});
-       });
-     });
-     const payload=new URLSearchParams();
-     ['Student_Name','Student_Number','Student_Email','Programme','Exam_Title','Exam_Number'].forEach(k=>payload.set(k,String(pairs.get(k)||'')));
-     payload.set('hsbf_pdf_request','1');payload.set('hsbf_pdf_answers',JSON.stringify(answers));
-     // Keepalive allows the request to continue during navigation; confirmation requires mailbox check.
-     fetch(endpoint,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:payload.toString()}).catch(()=>{});
-   }catch(err){console.error('Optional PDF copy could not be initiated',err);}
- },true);
-})();</script><script src="../answer-space.js"></script></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HSBF Exam 02 — COMPUTER FORENSIC TOOLS &amp; TECHNIQUES Paper 2</title><link rel="stylesheet" href="../style.css"><style>body{background:#f1f5fb;color:#172c48}main{max-width:1000px;margin:24px auto;padding:0 16px 65px}.paper{background:#fff;border:1px solid #dbe4f0;border-radius:12px;padding:clamp(16px,4vw,35px)}.question{border-top:1px solid #dbe4f0;padding:22px 0}.question strong{display:block;margin-bottom:14px;white-space:pre-wrap}.subquestion{white-space:pre-wrap}textarea{width:100%;box-sizing:border-box;min-height:260px;padding:14px;line-height:1.6;border:1px solid #a8bad1;border-radius:8px;resize:vertical}.choice{display:block;padding:12px;margin:9px 0;border:1px solid #d1ddeb;border-radius:8px;cursor:pointer}.choice:has(input:checked){background:#e4f0ff;border-color:#2462a6}.student-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;margin:22px 0}.student-fields label{display:block;font-weight:600}.student-fields input{width:100%;padding:12px;box-sizing:border-box;margin-top:6px}.instructions{background:#edf4fd;padding:18px;border-radius:8px}.submit{background:#154d8c;color:white;padding:15px 22px;border:0;border-radius:8px;font-weight:bold;cursor:pointer}.muted{color:#53647a}.bar{background:#102e52;color:#fff;padding:22px 5%}.bar h1{color:#fff}#clock{font-variant-numeric:tabular-nums;font-weight:700}</style></head><body><header class="bar"><h1>HSBF • Paper 2 Examination</h1><p>Harare School of Business &amp; Finance · In association with ZEGU</p></header><main><div class="paper"><h2>COMPUTER FORENSIC TOOLS &amp; TECHNIQUES</h2><p><b>Exam 02</b> · HDLCRM128 · 3 HOURS · 100 marks</p><p>Time remaining: <span id="clock"></span></p><div class="instructions"><p>INSTRUCTIONS TO CANDIDATES</p><p>Answer ALL FOUR questions.</p><p>Each question carries 25 marks (4 × 25 = 100 marks).</p><p>Apply relevant concepts to the scenario; support conclusions with clear reasoning.</p><p>Where information is missing, identify assumptions and evidence required.</p></div><form id="examform" action="https://formsubmit.co/kelvincybert9911@icloud.com" method="POST"><input type="hidden" name="_subject" value="HSBF PAPER 2 EXAM 02: COMPUTER FORENSIC TOOLS &amp; TECHNIQUES"><input type="hidden" name="_captcha" value="true"><input type="hidden" name="_template" value="table"><input type="hidden" name="Exam_Number" value="02"><input type="hidden" name="Exam_Title" value="COMPUTER FORENSIC TOOLS &amp; TECHNIQUES"><input type="hidden" name="Module_Code" value="HDLCRM128"><div class="student-fields"><label>Student Name<input name="Student_Name" required></label><label>Student Number<input name="Student_Number" required></label><label>Programme<input name="Programme" required></label><label>Student Email<input name="Student_Email" type="email" required></label></div><h3>SECTION A: APPLIED CASE STUDIES (100 MARKS)</h3><section class="question"><strong>QUESTION 1 — FORENSIC ACQUISITION AND WRITE BLOCKERS &amp; CHAIN OF CUSTODY AND EVIDENCE INTEGRITY (25 MARKS)</strong><p class="subquestion">Scenario: A Zimbabwean organisation is expanding operations into two provinces. Its management has limited funding, inconsistent procedures and rising customer complaints. Staff disagree about responsibilities, while stakeholders expect improved performance within six months.</p><p class="subquestion">(a) Identify and explain five specific issues or risks in this scenario that relate to forensic acquisition and write blockers. (5 marks)</p><p class="subquestion">(b) Analyse how weaknesses in chain of custody and evidence integrity could affect the organisation and its stakeholders. (5 marks)</p><p class="subquestion">(c) Propose a practical five-step response plan addressing forensic acquisition and write blockers, with responsibilities and priorities. (5 marks)</p><p class="subquestion">(d) Explain how management should use evidence and stakeholder consultation to make defensible decisions about chain of custody and evidence integrity. (5 marks)</p><p class="subquestion">(e) Recommend five measurable indicators or review methods to assess whether the proposed improvements are effective. (5 marks)</p><textarea name="Q001" rows="12" aria-label="Answer for question 1" placeholder="Type your answer here" ></textarea></section><section class="question"><strong>QUESTION 2 — FILE SYSTEM ARTEFACTS AND DELETED DATA &amp; EMAIL AND MESSAGING FORENSICS (25 MARKS)</strong><p class="subquestion">Scenario: A medium-sized organisation is introducing a new digital and operational system. The project is behind schedule, employee training is incomplete, performance records contain gaps, and management has requested a defensible recovery plan.</p><p class="subquestion">(a) Identify and explain five specific issues or risks in this scenario that relate to file system artefacts and deleted data. (5 marks)</p><p class="subquestion">(b) Analyse how weaknesses in email and messaging forensics could affect the organisation and its stakeholders. (5 marks)</p><p class="subquestion">(c) Propose a practical five-step response plan addressing file system artefacts and deleted data, with responsibilities and priorities. (5 marks)</p><p class="subquestion">(d) Explain how management should use evidence and stakeholder consultation to make defensible decisions about email and messaging forensics. (5 marks)</p><p class="subquestion">(e) Recommend five measurable indicators or review methods to assess whether the proposed improvements are effective. (5 marks)</p><textarea name="Q002" rows="12" aria-label="Answer for question 2" placeholder="Type your answer here" ></textarea></section><section class="question"><strong>QUESTION 3 — LOG CORRELATION AND TIMELINE RECONSTRUCTION &amp; CLOUD EVIDENCE COLLECTION (25 MARKS)</strong><p class="subquestion">Scenario: A service provider has received complaints after an unexpected disruption. An internal review found weak oversight, unreliable reporting, and insufficient communication with affected stakeholders. The board wants immediate controls and longer-term improvements.</p><p class="subquestion">(a) Identify and explain five specific issues or risks in this scenario that relate to log correlation and timeline reconstruction. (5 marks)</p><p class="subquestion">(b) Analyse how weaknesses in cloud evidence collection could affect the organisation and its stakeholders. (5 marks)</p><p class="subquestion">(c) Propose a practical five-step response plan addressing log correlation and timeline reconstruction, with responsibilities and priorities. (5 marks)</p><p class="subquestion">(d) Explain how management should use evidence and stakeholder consultation to make defensible decisions about cloud evidence collection. (5 marks)</p><p class="subquestion">(e) Recommend five measurable indicators or review methods to assess whether the proposed improvements are effective. (5 marks)</p><textarea name="Q003" rows="12" aria-label="Answer for question 3" placeholder="Type your answer here" ></textarea></section><section class="question"><strong>QUESTION 4 — FORENSIC TOOL VALIDATION &amp; REPORTING AND EXPERT TESTIMONY (25 MARKS)</strong><p class="subquestion">Scenario: A growing enterprise must choose between several competing investments. Its resources are constrained, risks are changing, and stakeholders disagree on priorities. Management requires a transparent, evidence-based action plan.</p><p class="subquestion">(a) Identify and explain five specific issues or risks in this scenario that relate to forensic tool validation. (5 marks)</p><p class="subquestion">(b) Analyse how weaknesses in reporting and expert testimony could affect the organisation and its stakeholders. (5 marks)</p><p class="subquestion">(c) Propose a practical five-step response plan addressing forensic tool validation, with responsibilities and priorities. (5 marks)</p><p class="subquestion">(d) Explain how management should use evidence and stakeholder consultation to make defensible decisions about reporting and expert testimony. (5 marks)</p><p class="subquestion">(e) Recommend five measurable indicators or review methods to assess whether the proposed improvements are effective. (5 marks)</p><textarea name="Q004" rows="12" aria-label="Answer for question 4" placeholder="Type your answer here"></textarea></section><label><input type="checkbox" required> I confirm these are my own answers and I am ready to submit.</label><p><button class="submit" type="submit">Submit Final Examination</button></p><p class="muted">Do not close the page until FormSubmit confirms receipt. Ensure your device is online.</p></form></div></main><script>let remaining=10800;const clock=document.getElementById('clock');function tick(){let h=String(Math.floor(remaining/3600)).padStart(2,'0'),m=String(Math.floor(remaining%3600/60)).padStart(2,'0'),s=String(remaining%60).padStart(2,'0');clock.textContent=`${h}:${m}:${s}`;if(remaining>0)remaining--;}tick();setInterval(tick,1000);let sent=false;document.getElementById('examform').addEventListener('submit',e=>{if(sent){e.preventDefault();return;}if(!confirm('Submit your final examination now? Verify all answers first.')){e.preventDefault();return;}sent=true;let btn=e.currentTarget.querySelector('button[type=submit]');if(btn){btn.disabled=true;btn.textContent='Sending examination…';}});</script><script src="../pdf-config.js"></script><script>
+(function () {
+  const form = document.getElementById("examform");
+  if (!form) return;
+
+  form.addEventListener("submit", function (event) {
+    if (event.defaultPrevented) return;
+
+    const endpoint = window.HSBF_PDF_WEBAPP_URL;
+    if (!endpoint) return;
+
+    const data = new FormData(form);
+    const answers = [];
+
+    form.querySelectorAll(".question").forEach((question, index) => {
+      const heading = question.querySelector("strong");
+      const fields = question.querySelectorAll(
+        "textarea[name], input[name], select[name]"
+      );
+
+      fields.forEach(field => {
+        if ((field.type === "checkbox" || field.type === "radio")
+            && !field.checked) return;
+
+        answers.push({
+          question: heading?.textContent || "Question " + (index + 1),
+          answer: field.value || "[No answer]"
+        });
+      });
+    });
+
+    const payload = new URLSearchParams();
+
+    [
+      "Student_Name",
+      "Student_Number",
+      "Student_Email",
+      "Programme",
+      "Exam_Title",
+      "Exam_Number"
+    ].forEach(key => {
+      payload.set(key, String(data.get(key) || ""));
+    });
+
+    payload.set("hsbf_pdf_request", "1");
+    payload.set("hsbf_pdf_answers", JSON.stringify(answers));
+
+    fetch(endpoint, {
+      method: "POST",
+      mode: "no-cors",
+      keepalive: true,
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body: payload.toString()
+    }).catch(console.error);
+  }, true);
+})();
+</script><script src="../answer-space.js"></script></body></html>
